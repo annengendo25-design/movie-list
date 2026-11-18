@@ -8,11 +8,15 @@ export default function App(){
     const newMovie={...movieDetails,id:crypto.randomUUID()};
     setMovies((currentMovies)=>[...currentMovies,newMovie]);
   }
+  function deleteMovie(movieId){
+    setMovies((currentMovies)=>
+    currentMovies.filter((movie)=>movie.id !==movieId));
+  }
   return(
     <main>
       <h1>My Movie List</h1>
       <AddMovieForm onAdd={addMovie}/>
-      <MovieList movies={movies}/>
+      <MovieList movies={movies} onDelete={deleteMovie}/>
     </main>
   );
 }
