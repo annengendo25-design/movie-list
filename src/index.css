@@ -27,3 +27,12 @@ main{
 .movie-card p{
   margin: 4px 0;
 }
+@media (hover:hover) and (prefers-reduced-motion: no-preference){
+  .movie-card{
+    transition: transform 180ms ease, box-shadow 180ms ease;
+  }
+  .movie-card:hover{
+    transform: translateX(-4px);
+    box-shadow: 0 8px 20px rgb(15 23 42/12%);
+  }
+}
