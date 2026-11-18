@@ -3,10 +3,14 @@ export default function AddMovieForm({onAdd}){
         event.preventDefault();
         const form=event.currentTarget;
         const data=new FormData(form);
-        onAdd({
-            title:data.get("title").trim(),
-            director:data.get("director").trim(),
-            year:Number(data.get("year")),
+        const title=data.get("title").trim();
+        const director=data.get("director").trim();
+        const year=Number(data.get("year"));
+        if(!title||!director){
+            alert("Enter a movie title and director");
+            return;
+        }
+        onAdd({title,director,year
         });
         form.reset();
     }
@@ -25,7 +29,7 @@ export default function AddMovieForm({onAdd}){
     </p>
     <p>
         <label>
-            Release year<input name="year" type="number" required/>
+            Release year<input name="year" type="number" min="1888" step="1" required/>
         </label>
     </p>
     <button type="submit">Add Movie</button>
