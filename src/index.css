@@ -5,7 +5,7 @@ body{
   margin: 0;
   background: #10131c;
   color: #f5f3ee;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 main{
   max-width: 1100px;
@@ -14,7 +14,7 @@ main{
 }
 h1{
   margin: 0 0 24px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: clamp(2rem,5vw,3rem);
 }
 main form{
